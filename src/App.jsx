@@ -6,12 +6,23 @@ import CourseList from "./components/CourseList"
 function App() {
 
   const [courses, setCourses] = useState([])
+  const [selectedCourse, setSelectedCourse] = useState([])
 
   useEffect(() => {
     fetch('../public/fakeData.json')
 			.then(res => res.json())
 			.then(data => setCourses(data))
   },[])
+
+  const handleSelectCourse = (course) => {
+    const isExist = selectedCourse.find(item => item.id == course.id)
+
+    if (isExist) {
+      return alert('Course already selected')
+    } else {
+      setSelectedCourse([...selectedCourse, course])
+    }
+  }
 
   return (
 		<>
@@ -22,10 +33,13 @@ function App() {
 				<div className='container mx-auto'>
 					<div className='grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8'>
 						<div className='lg:col-span-9'>
-							<CourseList courses = {courses}/>
+							<CourseList
+								courses={courses}
+								handleSelectCourse={handleSelectCourse}
+							/>
 						</div>
 						<div className='lg:col-span-3'>
-							<CourseCart />
+							<CourseCart selectedCourse={selectedCourse} />
 						</div>
 					</div>
 				</div>

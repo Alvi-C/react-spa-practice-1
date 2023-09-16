@@ -1,24 +1,17 @@
 /* eslint-disable react/prop-types */
 
 
-const CourseCard = ({ course }) => {
-
-    const { image, name, description, price, credit } = course
+const CourseCard = ({ course, handleSelectCourse }) => {
+	const { image, name, description, price, credit } = course
 
 	return (
 		<div className='bg-white p-2 rounded-xl'>
-			<img
-				alt=''
-				src={image}
-				className='w-full'
-			/>
+			<img alt='' src={image} className='w-full' />
 
 			<div className='p-4'>
-				<h3 className='text-lg font-medium text-gray-900'>
-					{name}
-				</h3>
+				<h3 className='text-lg font-medium text-gray-900'>{name}</h3>
 				<p className='mt-2 line-clamp-3 text-sm/relaxed text-gray-500'>
-                    {description}
+					{description}
 				</p>
 			</div>
 			<div className=''>
@@ -41,7 +34,7 @@ const CourseCard = ({ course }) => {
 					</svg>
 					<p className='text-gray-500'>Credit: {credit}</p>
 				</div>
-				<button className='px-2 py-1 w-full bg-blue-500 text-white my-2 rounded-lg'>
+				<button onClick={() => handleSelectCourse(course)} className='px-2 py-1 w-full bg-blue-500 text-white my-2 rounded-lg'>
 					Select
 				</button>
 			</div>

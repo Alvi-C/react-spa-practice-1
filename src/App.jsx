@@ -13,7 +13,7 @@ function App() {
   let [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
-    fetch('../public/fakeData.json')
+    fetch('./fakeData.json')
 			.then(res => res.json())
 			.then(data => setCourses(data))
   },[])

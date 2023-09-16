@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"image": "https://i.ibb.co/tMmv1Sv/Rectangle-2-2.png",
+		"image": "https://i.ibb.co/0GLX6DP/c-Programing.png",
 		"name": "Introduction to C Programming",
 		"description": "In this essential course for aspiring programmers, computer science foundations, coding basics, and algorithmic thinking come together.",
 		"price": 15000,
@@ -9,7 +9,7 @@
 	},
 	{
 		"id": 2,
-		"image": "https://i.ibb.co/ZVKH4wN/Rectangle-2-3.png",
+		"image": "https://i.ibb.co/tbQctS5/Algorithm.png",
 		"name": "Introduction to Algorithms",
 		"description": "Learn fundamental concepts for problem-solving in computer science and programming, including data structures and algorithms.",
 		"price": 25000,
@@ -17,7 +17,7 @@
 	},
 	{
 		"id": 3,
-		"image": "https://i.ibb.co/RbqR5DB/Introduction-to-C-for-DSA.png",
+		"image": "https://i.ibb.co/6m787rq/C.png",
 		"name": "Introduction to C++ for DSA",
 		"description": "Dive into this comprehensive C++ course for beginners, covering object-oriented programming, data structures, and software development.",
 		"price": 10000,
@@ -25,7 +25,7 @@
 	},
 	{
 		"id": 4,
-		"image": "https://i.ibb.co/ZMhkXsZ/Basic-Data-Structures.png",
+		"image": "https://i.ibb.co/svYcZjt/data-structure.png",
 		"name": "Basic Data Structures",
 		"description": "The Basic Data Structures will be the readable content of a page when looking at its layout is a long-established one.",
 		"price": 35000,
@@ -33,7 +33,7 @@
 	},
 	{
 		"id": 5,
-		"image": "https://i.ibb.co/SJQrB2L/Introduction-to-OOP-Python.png",
+		"image": "https://i.ibb.co/LntpCGg/python.png",
 		"name": "Introduction to OOP Python",
 		"description": "Learn Python programming, data manipulation, and versatile problem-solving for diverse fields through application development and automation.",
 		"price": 19000,
@@ -42,7 +42,7 @@
 
 	{
 		"id": 6,
-		"image": "https://i.ibb.co/rthHrSQ/Software-Engineering.png",
+		"image": "https://i.ibb.co/TYB2WMd/Software-Engg-Design.png",
 		"name": "Software Engineering",
 		"description": "Master principles, practices, and tools for designing, building, and maintaining robust software systems.",
 		"price": 23000,
@@ -51,7 +51,7 @@
 
 	{
 		"id": 7,
-		"image": "https://i.ibb.co/JQj83HZ/AWS-Cloud-Computing.png",
+		"image": "https://i.ibb.co/YX9B47P/aws.png",
 		"name": "AWS Cloud Computing",
 		"description": "Explore AWS, master cloud infrastructure, and comprehensive deployment strategies in this online course.",
 		"price": 35000,
@@ -60,7 +60,7 @@
 
 	{
 		"id": 8,
-		"image": "https://i.ibb.co/0KJQkxB/Database.png",
+		"image": "https://i.ibb.co/C0j0dVP/mySQL.png",
 		"name": "Database (MySQL)",
 		"description": "Build a strong foundation in essential data structures for programming, like arrays, linked lists, and trees.",
 		"price": 19000,
@@ -68,7 +68,7 @@
 	},
 	{
 		"id": 9,
-		"image": "https://i.ibb.co/YPvGhf9/Rectangle-2-6.png",
+		"image": "https://i.ibb.co/xFVHsJ9/problem-solving.png",
 		"name": "Problem-Solving Part",
 		"description": "Develop problem-solving strategies and critical thinking skills for tackling complex challenges in various domains.",
 		"price": 23000,

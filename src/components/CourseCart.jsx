@@ -1,7 +1,7 @@
 
 const CourseCart = () => {
     return (
-			<div className='p-3'>
+			<div className='p-3 bg-white rounded-xl'>
 				<h3 className='text-base font-bold text-blue-600 mb-4'>
 					Credit Hour Remaining 20 hr
 				</h3>

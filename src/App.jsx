@@ -95,6 +95,3 @@ function App() {
 }
 
 export default App
-
-// Not enough credit hour
-// Credit hour is full

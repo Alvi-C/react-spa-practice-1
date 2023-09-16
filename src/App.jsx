@@ -7,6 +7,9 @@ function App() {
 
   const [courses, setCourses] = useState([])
   const [selectedCourse, setSelectedCourse] = useState([])
+  let [remainingCreditHour, setRemainingCreditHour] = useState(20)
+  let [totalCreditHour, setTotalCreditHour] = useState(0)
+  let [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
     fetch('../public/fakeData.json')
@@ -14,12 +17,21 @@ function App() {
 			.then(data => setCourses(data))
   },[])
 
+
   const handleSelectCourse = (course) => {
-    const isExist = selectedCourse.find(item => item.id == course.id)
+
+    const isExist = selectedCourse.find(item => item.id === course.id)
 
     if (isExist) {
-      return alert('Course already selected')
+      alert('Course already selected')
+    } else if (remainingCreditHour - parseInt(course.credit) < 0) {
+      alert('Not enough credit hour')
+    }else if (totalCreditHour + parseInt(course.credit) > 20) {
+      alert('Credit hour is full')
     } else {
+      setRemainingCreditHour(remainingCreditHour - parseInt(course.credit))
+      setTotalCreditHour(totalCreditHour + parseInt(course.credit))
+      setTotalPrice(totalPrice + course.price)
       setSelectedCourse([...selectedCourse, course])
     }
   }
@@ -39,7 +51,12 @@ function App() {
 							/>
 						</div>
 						<div className='lg:col-span-3'>
-							<CourseCart selectedCourse={selectedCourse} />
+							<CourseCart
+								selectedCourse={selectedCourse}
+								remainingCreditHour={remainingCreditHour}
+                totalCreditHour={totalCreditHour}
+                totalPrice={totalPrice}
+							/>
 						</div>
 					</div>
 				</div>

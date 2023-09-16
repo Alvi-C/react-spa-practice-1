@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 
-const CourseCart = ({ selectedCourse }) => {
+const CourseCart = ({ selectedCourse, remainingCreditHour, totalCreditHour, totalPrice }) => {
 
     return (
 			<div className='p-3 bg-white rounded-xl'>
 				<h3 className='text-base font-bold text-blue-600 mb-4'>
-					Credit Hour Remaining 20 hr
+					Credit Hour Remaining {remainingCreditHour} hr
 				</h3>
 				<hr className='my-4' />
 				<div>
@@ -20,9 +20,9 @@ const CourseCart = ({ selectedCourse }) => {
 						</li>
 				))}
 				<hr className='my-4' />
-				<h3 className='text-base font-medium'>Total Credit Hour: 14</h3>
+				<h3 className='text-base font-medium'>Total Credit Hour: {totalCreditHour}</h3>
 				<hr className='my-4' />
-				<h3 className='text-base font-medium mb-2'>Total Price: 48000 usd</h3>
+				<h3 className='text-base font-medium mb-2'>Total Price: {totalPrice} usd</h3>
 			</div>
 		)
 };

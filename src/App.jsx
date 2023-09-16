@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import CourseCart from "./components/CourseCart"
 import CourseList from "./components/CourseList"
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function App() {
 
@@ -23,11 +24,38 @@ function App() {
     const isExist = selectedCourse.find(item => item.id === course.id)
 
     if (isExist) {
-      alert('Course already selected')
+      toast.error('The course is already selected', {
+				position: 'top-center',
+				autoClose: 2000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'colored',
+			})
     } else if (remainingCreditHour - parseInt(course.credit) < 0) {
-      alert('Not enough credit hour')
+      toast.error('Not enough credit hour', {
+				position: 'bottom-right',
+				autoClose: 2000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'colored',
+			})
     }else if (totalCreditHour + parseInt(course.credit) > 20) {
-      alert('Credit hour is full')
+      toast.error('Credit hour is full', {
+				position: 'top-right',
+				autoClose: 2000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: 'colored',
+			})
     } else {
       setRemainingCreditHour(remainingCreditHour - parseInt(course.credit))
       setTotalCreditHour(totalCreditHour + parseInt(course.credit))
@@ -43,19 +71,20 @@ function App() {
 					Course Registration
 				</h1>
 				<div className='container mx-auto'>
-					<div className='grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8'>
+					<div className='grid grid-cols-1 gap-4 lg:grid-cols-12 lg:gap-8 mx-2'>
 						<div className='lg:col-span-9'>
 							<CourseList
 								courses={courses}
 								handleSelectCourse={handleSelectCourse}
 							/>
+							<ToastContainer />
 						</div>
 						<div className='lg:col-span-3'>
 							<CourseCart
 								selectedCourse={selectedCourse}
 								remainingCreditHour={remainingCreditHour}
-                totalCreditHour={totalCreditHour}
-                totalPrice={totalPrice}
+								totalCreditHour={totalCreditHour}
+								totalPrice={totalPrice}
 							/>
 						</div>
 					</div>
@@ -66,3 +95,6 @@ function App() {
 }
 
 export default App
+
+// Not enough credit hour
+// Credit hour is full

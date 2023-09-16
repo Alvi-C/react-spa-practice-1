@@ -16,7 +16,22 @@ const CourseCard = ({ course, handleSelectCourse }) => {
 			</div>
 			<div className=''>
 				<div className='flex justify-between p-2'>
-					<p className='text-gray-500'>Price: BDT {price}</p>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						width='24'
+						height='24'
+						viewBox='0 0 24 24'
+					>
+						<path
+							fill='currentColor'
+							d='M12 20.75a.76.76 0 0 1-.75-.75V4a.75.75 0 0 1 1.5 0v16a.76.76 0 0 1-.75.75Z'
+						/>
+						<path
+							fill='currentColor'
+							d='M13.5 18.75H7a.75.75 0 0 1 0-1.5h6.5A2.54 2.54 0 0 0 16.25 15a2.54 2.54 0 0 0-2.75-2.25h-3A4 4 0 0 1 6.25 9a4 4 0 0 1 4.25-3.75H16a.75.75 0 0 1 0 1.5h-5.5A2.54 2.54 0 0 0 7.75 9a2.54 2.54 0 0 0 2.75 2.25h3A4 4 0 0 1 17.75 15a4 4 0 0 1-4.25 3.75Z'
+						/>
+					</svg>
+					<p className='text-gray-500'>Price: {price}</p>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						width='24'
@@ -34,7 +49,10 @@ const CourseCard = ({ course, handleSelectCourse }) => {
 					</svg>
 					<p className='text-gray-500'>Credit: {credit}</p>
 				</div>
-				<button onClick={() => handleSelectCourse(course)} className='px-2 py-1 w-full bg-blue-500 text-white my-2 rounded-lg'>
+				<button
+					onClick={() => handleSelectCourse(course)}
+					className='px-2 py-1 w-full bg-blue-500 text-white my-2 rounded-lg'
+				>
 					Select
 				</button>
 			</div>
